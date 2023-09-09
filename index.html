@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="stylesheet" href="./src/style/toggle.css">
+</head>
+
+<body>
+    <main>
+        <article>
+            <section>
+                <form id="form" class="form">
+
+                    <div class="input-label">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Informe seu Nome" data-required
+                            data-notNumber>
+                    </div>
+                    <div class="input-label">
+                        <label for="idade">Idade</label>
+                        <input type="text" name="idade" id="idade" placeholder="Informe sua Idade" data-required
+                            data-isNumber data-minValue="18" data-maxValue="70">
+                    </div>
+                    <div class="input-label">
+                        <label for="cargo">Cargo</label>
+                        <input type="text" name="cargo" id="cargo" placeholder="Informe seu Cargo" data-required
+                            data-notNumber>
+                    </div>
+
+                    <div class="input-toggle">
+                        <p> Selecione o tipo de Funcionario:</p>
+                        <div class="toggle">
+                            <input type="checkbox" id="foo">
+                            <label for="foo" />
+                        </div>
+                        <p id="funcionario_label">Desenvolvedor</p>
+                    </div>
+
+                    <div class="input-label" id="gerente-input" style="display: none;">
+                        <label for="departamento">Departamento</label>
+                        <input type="text" name="departamento" id="departamento" placeholder="Informe seu Departamento"
+                            data-required data-notNumber>
+                    </div>
+                    <div class="input-label" id="desenvolvedor-input">
+                        <label for="linguagem">Linguagem</label>
+                        <input type="text" name="linguagem" id="linguagem" placeholder="Informe a Linguagem"
+                            data-required data-notNumber>
+                    </div>
+                    <div>
+                        <input type="submit" id="submit" value="Add funcionario">
+                    </div>
+                </form>
+
+            </section>
+            <p class="error-validation tamplate" />
+        </article>
+
+        <article>
+            <section>
+                <table id="tabela">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Cargo</th>
+                            <th>Linguagem</th>
+                            <th>Departamento</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody/>
+                </table>
+            </section>
+        </article>
+    </main>
+
+    <script type="module" src="./src/script/main.js"></script>
+</body>
+
+</html>
